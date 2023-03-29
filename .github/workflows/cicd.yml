@@ -24,9 +24,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          #script: "cd /var/www/html/git-action-laravel && ./.scripts/deploy.sh"
-          script: |
-            whoami
-            echo "$HOST"
-            ls -a
-
+          script: "cd /var/www/html/git-action-laravel && ./.scripts/deploy.sh"
+        
