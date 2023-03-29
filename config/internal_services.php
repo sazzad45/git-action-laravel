@@ -1,0 +1,19 @@
+<?php
+
+return [
+    'fastpay_api_old' => false,
+    'thirdparty' => [
+        'base_url' => env('INTERNAL_3RD_PARTY_BASEURL', ''),
+    ],
+    'proxy_enable' => false,
+    'proxy_url' => 'proxy.fast-pay.cash:3128',
+    'request_timeout' => 120,
+
+    'marketing_panel' => [
+        'base_url' => env('MARKETING_PANEL_URL', ''),
+        
+        'access_token' => [
+            'store_access_token' => env('STORE_ACCESS_TOKEN', '50ea1c8fa1fe60cdc021873ad31e7bd7f11fcd59a520197d2f3e32a613cf0dd59b7c386871eb154c2b304b9062509bac6bd3b993ca1b27c0897fca68d70ab277f976a006e7ee341f90de3779b5082992f8b8cb7dbe46878c6d02c559f4b9f8bd74f608454e67b2523409099f49d7e700e7f7bed200721c06776e9b8c221e4d12c77ede2b8890e52a41dab7ee1e0033602a4c767f3cd967f7bb50d0ba16c3f6e6e3a0f02b0b3412d0ee254792d4b0713e07a60c4ca3b5b1192e732bc89ed87889bf78e7500adf6442b2a6231974cc2010f23e29736aa52748aea027beaae3b6d47603f7e96cb0bb5b550b0a363a82c82e87f8e94e9a41c7273b4e91829d002fb629cf7a6f643da1bf5e86fef421a101e4582a5a79f06b92506c25a6cea74d71e7f9b507b3fbc74b443337aa48794dfdef784d8079bdb667bb3e53642999c930305a9637b8de761fc367619ef9294e214ae5b3743f2de1b1e28d534a382ad0ce5503593ce21eccd0f627abd3c5f10ba4bd703519a54bd37329c2386dda35f0c8d0ad9ecb36312e51344343f029540272d1ad69a7c5589aed406a1740bdc4de9143b5cd5430f20f1b28b074ec52e1e4304141df034775a394f5527e1370239765853d49fa26159493807e34e61b19484541491b4ce9f8b8eab20eeb30c12bd1c737af46a2097506d2d69307d9dd127c4818cc813b70'),
+        ],
+    ]
+];
