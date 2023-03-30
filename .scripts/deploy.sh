@@ -8,9 +8,10 @@ echo "Deployment started ..."
 (php artisan down) || true
 
 # Pull the latest version of the app
-git fetch
-git stash
-git pull --rebase origin main
+#git fetch
+#git stash
+#git pull --rebase origin main
+sudo git checkout .
 git pull origin main
 
 # Install composer dependencies
