@@ -13,8 +13,7 @@ git pull --rebase origin main
 git pull origin main
 
 # Install composer dependencies
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-
+composer install --ignore-platform-reqs
 # Clear the old cache
 php artisan clear-compiled
 
