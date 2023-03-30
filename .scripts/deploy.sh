@@ -8,8 +8,8 @@ echo "Deployment started ..."
 (php artisan down) || true
 
 # Pull the latest version of the app
-git stash
 git fetch
+git stash
 git pull --rebase origin main
 git pull origin main
 
