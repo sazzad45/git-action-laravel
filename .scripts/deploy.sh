@@ -9,6 +9,7 @@ echo "Deployment started ..."
 
 # Pull the latest version of the app
 git stash
+git fetch
 git pull --rebase origin main
 git pull origin main
 
