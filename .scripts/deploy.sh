@@ -11,11 +11,14 @@ echo "Deployment started ..."
 #git fetch
 #git stash
 #git pull --rebase origin main
+echo dev
+pushd /var/www/html/git-action-laravel/
 sudo git checkout .
-git pull origin main
+sudo git pull origin main
+sudo composer install 
 
 # Install composer dependencies
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+#composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
 # Clear the old cache
 php artisan clear-compiled
