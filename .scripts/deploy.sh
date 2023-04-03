@@ -16,6 +16,14 @@ pushd /var/www/html/git-action-laravel/
 sudo git checkout .
 sudo git pull origin main
 sudo composer install 
+sudo chmod -R 777 storage
+sudo chmod -R 777 bootstrap/cache
+popd
+sudo chown -Rf nginx:fpay /var/www/html/git-action-laravel/
+sudo chmod -Rf 770 /var/www/html/git-action-laravel/
+sudo chmod -Rf g+s /var/www/html/git-action-laravel/
+sudo systemctl reload php-fpm.service
+sudo nginx -s reload
 
 # Install composer dependencies
 #composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
@@ -24,7 +32,7 @@ sudo composer install
 php artisan clear-compiled
 
 # Recreate cache
-php artisan optimize
+#php artisan optimize
 
 # Compile npm assets
 #npm run prod
