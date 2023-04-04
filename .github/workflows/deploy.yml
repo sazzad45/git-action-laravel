@@ -11,7 +11,7 @@ on:
 # Authenticate to the the server via ssh
 # and run our deployment script
 jobs:
-  deploy:
+  deploy-server-1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,7 +25,7 @@ jobs:
           script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
 
 
-  deploy2:
+  deploy-server-2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -37,5 +37,5 @@ jobs:
           port: ${{ secrets.PORT2 }}
           key: ${{ secrets.SSHKEY2 }}
           run : echo "got access in server finally"
-          script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
+          #script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
                 
