@@ -25,7 +25,7 @@ jobs:
           script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
 
 
-  deploy:
+  deploy2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
