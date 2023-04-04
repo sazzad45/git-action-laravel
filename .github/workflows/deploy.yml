@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
 
-jobs:
+
   deploy:
     runs-on: ubuntu-latest
     steps:
