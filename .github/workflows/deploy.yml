@@ -23,3 +23,4 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
+          
