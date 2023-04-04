@@ -37,5 +37,5 @@ jobs:
           port: ${{ secrets.PORT2 }}
           key: ${{ secrets.SSHKEY2 }}
           run : echo "got access in server finally"
-          #script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
+          script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
                 
