@@ -24,6 +24,14 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/html/git-action-laravel && sudo ./.scripts/deploy.sh"
 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:        
           host: ${{ secrets.HOST2 }}
           username: ${{ secrets.USERNAME2 }}
           port: ${{ secrets.PORT2 }}
